@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.2.0'
 
+# install mechanize
+gem 'mechanize'
 # Use Nokogiri for scraping data in lieu of API
 gem 'nokogiri'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+InfoPleaseScraper.year_pages.each do |year_page|
+
+  Year.create(
+    year_number:   year_page.year,
+    world_events:  year_page.world_events,
+    us_events:     year_page.us_events,
+    economics:     year_page.economics,
+    sports:        year_page.sports,
+    entertainment: year_page.entertainment,
+    science:       year_page.science
+  )
+
+end
