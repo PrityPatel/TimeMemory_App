@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require_relative '../info_please_scraper'
 
 InfoPleaseScraper.year_pages.each do |year_page|
 
