@@ -10,7 +10,7 @@ class InfoPleaseScraper
   end
 
   def self.years
-    get_home_page.links_with(text: /(19|20)[\d]{2}$/).map {|year| year.text}
+    get_home_page.links_with(text: /(19)[\d]{2}$/).map {|year| year.text}
   end
 
   def self.year_pages

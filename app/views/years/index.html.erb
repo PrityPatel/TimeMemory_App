@@ -1,0 +1,18 @@
+
+<div>
+<% @years.each do |year| %> <br>
+<h2><%= year.year_number %></h2>
+  <h3>World Events</h3>
+  <%= year.world_events %> <br>
+  <h3>U.S. Events</h3>
+  <%= year.us_events %> <br>
+  <h3>Economics</h3>
+  <%= year.economics %> <br>
+  <h3>Sports</h3>
+  <%= year.sports %> <br>
+  <h3>Entertainment</h3>
+  <%= year.entertainment %> <br>
+  <h3>Science</h3>
+  <%= year.science %> <br><br><br>
+</div>
+<% end %>
