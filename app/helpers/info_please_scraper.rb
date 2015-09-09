@@ -10,7 +10,7 @@ class InfoPleaseScraper
   end
 
   def self.years
-    get_home_page.links_with(text: /(19)[\d]{2}$/).map {|year| year.text}
+    get_home_page.links_with(text: /(19|20)[\d]{2}$/).map {|year| year.text}
   end
 
   def self.year_pages
@@ -52,17 +52,17 @@ class InfoPleaseScraper
     get_info_by_heading("World Events")
   end
 
-  def us_events
-    get_info_by_heading("U.S. Events")
-  end
+  # def us_events
+  #   get_info_by_heading("U.S. Events")
+  # end
 
-  def economics
-    get_info_by_heading("Economics")
-  end
+  # def economics
+  #   get_info_by_heading("Economics")
+  # end
 
-  def sports
-    get_info_by_heading("Sports")
-  end
+  # def sports
+  #   get_info_by_heading("Sports")
+  # end
 
   def entertainment
     get_info_by_heading("Entertainment")
