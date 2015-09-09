@@ -22,8 +22,15 @@ ActiveRecord::Schema.define(version: 20150908204055) do
   end
 
   create_table "years", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "year_number"
+    t.text     "world_events"
+    t.text     "us_events"
+    t.text     "economics"
+    t.text     "sports"
+    t.text     "entertainment"
+    t.text     "science"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

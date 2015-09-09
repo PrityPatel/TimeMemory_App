@@ -27,6 +27,7 @@ class InfoPleaseScraper
 
   def initialize(year)
     @year      = year
+    puts year.to_s + "... is being clicked!"
     @year_page = InfoPleaseScraper.get_home_page.links_with(text: year.to_s).first.click
   end
 
@@ -39,7 +40,12 @@ class InfoPleaseScraper
   # end
 
   def get_info_by_heading(heading)
-    year_page.search('//h2[text()="#{heading}"]/following-sibling::ul[@class="v2"]').first.text
+    info = year_page.search("//h2[text()='#{heading}']/following-sibling::ul[@class='v2']").first
+    if info.nil?
+      ""
+    else
+      info.text
+    end
   end
 
   def world_events
@@ -60,6 +66,10 @@ class InfoPleaseScraper
 
   def entertainment
     get_info_by_heading("Entertainment")
+  end
+
+  def science
+    get_info_by_heading("Science")
   end
 
   def inspect

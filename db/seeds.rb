@@ -6,7 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Year.destroy_all
+
 InfoPleaseScraper.year_pages.each do |year_page|
+
+  puts year_page.year + " is being created!"
+
+  puts "  world_events: "  + year_page.world_events[0..25]
+  puts "  us_events: "     + year_page.us_events[0..25]
+  puts "  economics: "     + year_page.economics[0..25]
+  puts "  sports: "        + year_page.sports[0..25]
+  puts "  entertainment: " + year_page.entertainment[0..25]
+  puts "  science: "       + year_page.science[0..25]
 
   Year.create(
     year_number:   year_page.year,
