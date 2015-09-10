@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-@import "materialize";
-select {
-  display: inline;
-}
+
+  @import "materialize";
+  select {
+    display: inline;
+  }
