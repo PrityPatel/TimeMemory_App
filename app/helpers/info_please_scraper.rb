@@ -43,7 +43,9 @@ class InfoPleaseScraper
     info = year_page.search("//h2[text()='#{heading}']/following-sibling::ul[@class='v2']").first
     if info.nil?
       []
+      # ''
     else
+      # scrub info.text
       scrub_and_split info.text
     end
   end
