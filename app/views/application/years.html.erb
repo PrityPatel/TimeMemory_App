@@ -1,0 +1,59 @@
+<style type="text/css">
+
+body {
+  background-image: url(http://3.bp.blogspot.com/-v1lgAjcv26c/UybkjvA7UxI/AAAAAAAAAAA/todABv9iFPo/s1600/time%2Btravel.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+}
+
+div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+div.transbox p {
+    margin: 5%;
+    padding-left: 30px;
+    font-weight: bold;
+    color: #000000;
+}
+
+h5 {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+</style>
+
+<body>
+<div class="transbox">
+<center><h1>Stroll down Memory Lane</h1></center>
+</div>
+
+<ul>
+  <li ng-repeat="year in vm.years track by $index">
+  <div class="transbox">
+    <h3><center>In the Year {{year.year_number}}</center></h3>
+    <h5>World Events</h5>
+    <p>{{year.world_events}}</p>
+    <h5>Entertainment</h5>
+    <p>{{year.entertainment}}</p>
+    <h5>Science</h5>
+    <p>{{year.science}}</p>
+</div>
+  </li>
+</ul>
+
+
+</body>
+
+
+
+

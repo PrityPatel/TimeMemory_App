@@ -1,0 +1,35 @@
+<style type="text/css">
+body {
+  background-image: url(http://discoveriesindisplacement.com/files/timetravel2.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+}
+
+div.search {
+  margin-top: 70%;
+}
+</style>
+
+<body>
+
+<div class="search">
+  <select ng-model="vm.selYear">
+  <option value="">Select</option>
+  <option value="1960">1960</option>
+  <option value="1970">1970</option>
+  <option value="1980">1980</option>
+  <option value="1990">1990</option>
+  <option value="2000">2000</option>
+</select>
+
+<a ui-sref="year({year: vm.selYear })" ng-show="vm.selYear">Go to Selected Year!</a>
+</div>
+  <a ui-sref="years">or Take a Walk Back In Time!</a><br><br>
+
+</body>

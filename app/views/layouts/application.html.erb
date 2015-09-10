@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
   <title>TimeMemoryApp</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="container" ui-view>
+  </div>
 <%= yield %>
-
 </body>
 </html>
