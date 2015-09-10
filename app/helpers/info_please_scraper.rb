@@ -42,19 +42,31 @@ class InfoPleaseScraper
   def get_info_by_heading(heading)
     info = year_page.search("//h2[text()='#{heading}']/following-sibling::ul[@class='v2']").first
     if info.nil?
-      ""
+      []
     else
-      info.text
+      scrub_and_split info.text
     end
+  end
+
+  def scrub(text)
+    text.encode("utf-8", :undef => :replace, :invalid => :replace)
+  end
+
+  def split(text)
+    text.gsub(/(\r\n)+/, '§').split('§')
+  end
+
+  def scrub_and_split(text)
+    split(scrub(text))
   end
 
   def world_events
     get_info_by_heading("World Events")
   end
 
-  # def us_events
-  #   get_info_by_heading("U.S. Events")
-  # end
+  def us_events
+    get_info_by_heading("U.S. Events")
+  end
 
   # def economics
   #   get_info_by_heading("Economics")

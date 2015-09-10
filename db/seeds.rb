@@ -12,17 +12,17 @@ InfoPleaseScraper.year_pages.each do |year_page|
 
   puts year_page.year + " is being created!"
 
-  puts "  world_events: "  + year_page.world_events[0..25]
-  # puts "  us_events: "     + year_page.us_events[0..25]
+  puts "  world_events: "  + year_page.world_events[0][0..25] if year_page.world_events[0]
+  puts "  us_events: "     + year_page.us_events[0][0..25]    if year_page.us_events[0]
   # puts "  economics: "     + year_page.economics[0..25]
   # puts "  sports: "        + year_page.sports[0..25]
-  puts "  entertainment: " + year_page.entertainment[0..25]
-  puts "  science: "       + year_page.science[0..25]
+  puts "  entertainment: " + year_page.entertainment[0][0..25] if year_page.entertainment[0]
+  puts "  science: "       + year_page.science[0][0..25]       if year_page.science[0]
 
   Year.create(
     year_number:   year_page.year,
     world_events:  year_page.world_events,
-    # us_events:     year_page.us_events,
+    us_events:     year_page.us_events,
     # economics:     year_page.economics,
     # sports:        year_page.sports,
     entertainment: year_page.entertainment,
