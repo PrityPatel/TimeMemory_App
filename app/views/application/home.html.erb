@@ -21,6 +21,7 @@ div.search {
 <div class="search">
   <select ng-model="vm.selYear">
   <option value="">Select</option>
+  <option value="years">All Years</option>
   <option value="1960">1960</option>
   <option value="1970">1970</option>
   <option value="1980">1980</option>
@@ -30,6 +31,9 @@ div.search {
 
 <a ui-sref="year({year: vm.selYear })" ng-show="vm.selYear">Go to Selected Year!</a>
 </div>
-  <a ui-sref="years">or Take a Walk Back In Time!</a><br><br>
+
+  <div>
+  <a ui-sref="years">or Take a Walk Back Throughout Time!</a><br><br>
+  </div>
 
 </body>

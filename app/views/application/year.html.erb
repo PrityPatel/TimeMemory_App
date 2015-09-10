@@ -29,13 +29,37 @@ h5 {
   margin-left: 15px;
 }
 
+.links {
+  font-weight: bold;
+  text-align: center;
+}
+
 </style>
 
 <body>
 
 
 <div class="transbox">
-<center><h1>Year - {{vm.year.year_number}}</h1></center>
+<center><h1>Year - {{vm.year.year_number}}</h1></center><br>
+  <div class="links">
+  <a ui-sref="home">Homepage</a><br><br>
+  <a ui-sref="years">All Years</a><br><br>
+  </div>
+</div>
+
+<div class="transbox">
+<div class="search">
+  <select ng-model="vm.selYear">
+  <option value="">Select Another Year</option>
+  <option value="years">All Years</option>
+  <option value="1960">1960</option>
+  <option value="1970">1970</option>
+  <option value="1980">1980</option>
+  <option value="1990">1990</option>
+  <option value="2000">2000</option>
+</select>
+<a ui-sref="year({year: vm.selYear})" ng-show="vm.selYear">Go to Selected Year!</a>
+</div>
 </div>
 
 <div class="transbox">

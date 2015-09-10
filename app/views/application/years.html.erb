@@ -1,11 +1,11 @@
 <style type="text/css">
 
 body {
-  background-image: url(http://3.bp.blogspot.com/-v1lgAjcv26c/UybkjvA7UxI/AAAAAAAAAAA/todABv9iFPo/s1600/time%2Btravel.jpg);
+  background-image: url(http://www.hdwallpapers.in/walls/space_time_travel-wide.jpg);
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
   z-index: -1;
   top: 0px;
   left: 0px;
@@ -30,11 +30,34 @@ h5 {
   margin-left: 15px;
 }
 
+.links {
+  font-weight: bold;
+  text-align: center;
+}
 </style>
 
 <body>
+
 <div class="transbox">
 <center><h1>Stroll down Memory Lane</h1></center>
+<div class="links">
+  <a ui-sref="home">Homepage</a><br><br>
+  </div>
+</div>
+
+<div class="transbox">
+<div class="search">
+  <select ng-model="vm.selYear">
+  <option value="">or Select a Specific Year Here</option>
+  <option value="1960">1960</option>
+  <option value="1970">1970</option>
+  <option value="1980">1980</option>
+  <option value="1990">1990</option>
+  <option value="2000">2000</option>
+</select>
+
+<a ui-sref="year({year: vm.selYear })" ng-show="vm.selYear">Go to Selected Year!</a>
+</div>
 </div>
 
 <ul>
@@ -47,6 +70,9 @@ h5 {
     <p>{{year.entertainment}}</p>
     <h5>Science</h5>
     <p>{{year.science}}</p>
+    <div class="links">
+    <a ui-sref="home">Homepage</a><br><br>
+  </div>
 </div>
   </li>
 </ul>
