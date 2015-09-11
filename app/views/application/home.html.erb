@@ -31,8 +31,8 @@ a {
   <option value="">Select a Specific Year</option>
   <option ng-repeat="year in vm.years_list track by $index" value="{{year}}">{{year}}</option>
 </select><br>
-<a ui-sref="year({year: vm.selYear })" ng-show="vm.selYear">Go to Selected Year!</a>
-<a ui-sref="years">or Take a Walk Through Time!</a><br>
+<a ui-sref="year({year: vm.selYear })" ng-show="vm.selYear">Go to Selected Year</a>
+<a ui-sref="years">or Take a Walk Through Time</a><br>
 </div>
 
 
