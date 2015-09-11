@@ -6,7 +6,9 @@
       $stateProvider
         .state('home', {
           url: '/home',
-          templateUrl: '/pages/home.html'
+          templateUrl: '/pages/home.html',
+          controller: 'HomeController',
+          controllerAs: 'vm'
         })
 
         .state('years', {

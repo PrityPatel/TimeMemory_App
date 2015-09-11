@@ -51,12 +51,7 @@ h5 {
 <div class="search">
   <select ng-model="vm.selYear">
   <option value="">Select Another Year</option>
-  <option value="years">All Years</option>
-  <option value="1960">1960</option>
-  <option value="1970">1970</option>
-  <option value="1980">1980</option>
-  <option value="1990">1990</option>
-  <option value="2000">2000</option>
+   <option ng-repeat="year in vm.years_list track by $index" value="{{year}}">{{year}}</option>
 </select>
 <a ui-sref="year({year: vm.selYear})" ng-show="vm.selYear">Go to Selected Year!</a>
 </div>
@@ -64,22 +59,22 @@ h5 {
 
 <div class="transbox">
 <h5>World Events</h5>
-<p>{{vm.year.world_events}}</p>
+<p ng-repeat="world_events in vm.year.world_events track by $index">{{world_events}}</p>
 </div>
 
 <div class="transbox">
 <h5>U.S. Events</h5>
-<p>{{vm.year.us_events}}</p>
+<p ng-repeat="us_events in vm.year.us_events track by $index">{{us_events}}</p>
 </div>
 
 <div class="transbox">
 <h5>Entertainment</h5>
-<p>{{vm.year.entertainment}}</p>
+<p ng-repeat="entertainment in vm.year.entertainment track by $index">{{entertainment}}</p>
 </div>
 
 <div class="transbox">
 <h5>Science</h5>
-<p>{{vm.year.science}}</p>
+<p ng-repeat="science in vm.year.science track by $index">{{science}}</p>
 </div>
 
 </body>

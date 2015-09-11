@@ -4,10 +4,11 @@
   angular.module('app')
     .controller('OneYearController', OneYearController);
 
-    OneYearController.$inject = ['$http', '$stateParams'];
+    OneYearController.$inject = ['$http', 'yearsService', '$stateParams'];
 
-    function OneYearController($http, $stateParams){
+    function OneYearController($http, yearsService, $stateParams){
       var vm = this;
+      vm.years_list = yearsService.allYears;
 
 
       $http.get('/api/years/' + $stateParams.year)
