@@ -6,8 +6,6 @@ class CreateYears < ActiveRecord::Migration
 
       t.text   :world_events
       t.text   :us_events
-      t.text   :economics
-      t.text   :sports
       t.text   :entertainment
       t.text   :science
 

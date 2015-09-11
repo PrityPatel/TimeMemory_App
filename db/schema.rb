@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 20150908204055) do
     t.string   "year_number"
     t.text     "world_events"
     t.text     "us_events"
-    t.text     "economics"
-    t.text     "sports"
     t.text     "entertainment"
     t.text     "science"
     t.datetime "created_at",    null: false
