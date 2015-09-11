@@ -34,6 +34,16 @@ h5 {
   text-align: center;
 }
 
+.search {
+  margin-left: 30%;
+  background-color: #ffffff;
+  order: 1px solid black;
+  opacity: 0.6;
+  font-weight: bold;
+  width: 500px;
+  height: 40px;
+}
+
 </style>
 
 <body>
@@ -47,14 +57,12 @@ h5 {
   </div>
 </div>
 
-<div class="transbox">
 <div class="search">
   <select ng-model="vm.selYear">
   <option value="">Select Another Year</option>
    <option ng-repeat="year in vm.years_list track by $index" value="{{year}}">{{year}}</option>
 </select>
 <a ui-sref="year({year: vm.selYear})" ng-show="vm.selYear">Go to Selected Year!</a>
-</div>
 </div>
 
 <div class="transbox">

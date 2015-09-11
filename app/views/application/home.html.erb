@@ -12,23 +12,29 @@ body {
 }
 
 div.search {
-  margin-top: 70%;
+  margin-top: 68%;
+  margin-left: 35%;
+  width: 500px;
+  height: 40px;
 }
+
+a {
+  padding-left: 10px;
+}
+
 </style>
 
 <body>
 
 <div class="search">
   <select ng-model="vm.selYear">
-  <option value="">Select a Specific Year Here</option>
+  <option value="">Select a Specific Year</option>
   <option ng-repeat="year in vm.years_list track by $index" value="{{year}}">{{year}}</option>
-</select>
-
+</select><br>
 <a ui-sref="year({year: vm.selYear })" ng-show="vm.selYear">Go to Selected Year!</a>
+<a ui-sref="years">or Take a Walk Through Time!</a><br>
 </div>
 
-  <div>
-  <a ui-sref="years">or Take a Walk Back Throughout Time!</a><br><br>
-  </div>
+
 
 </body>
